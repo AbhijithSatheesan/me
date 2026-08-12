@@ -1,69 +1,43 @@
-import React, { type FormEvent } from "react";
+import React from "react";
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    console.log("Submitted:", Object.fromEntries(formData));
-    alert("Message sent!");
-  };
-
   return (
-    <section id="contact" className="scroll-mt-24 py-16 border-t border-zinc-800">
-      <div className="max-w-3xl mx-auto px-4 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Let's Work Together</h2>
-        <p className="text-zinc-400 mb-8">
-          Have a project in mind or need a developer for full-stack engineering? Send me a message.
+    <section id="contact" className="scroll-mt-24 py-24 border-t border-zinc-900">
+      <div className="max-w-2xl mx-auto px-4 text-center flex flex-col items-center">
+        
+        {/* Availability Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 mb-8">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span className="text-xs font-medium text-zinc-300 uppercase tracking-widest">
+            Available for new opportunities
+          </span>
+        </div>
+
+        <h2 className="text-4xl sm:text-5xl font-serif text-white mb-6">
+          Let's Work Together
+        </h2>
+        
+        <p className="text-zinc-400 text-lg mb-10 leading-relaxed font-light">
+          Have a project in mind, need a full-stack engineer, or just want to chat about system architecture? My inbox is always open.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4 text-left">
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="name" className="block text-xs font-medium text-zinc-400 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-4 py-2.5 rounded-lg bg-black border-2 border-zinc-700 text-white focus:outline-none focus:border-zinc-400 text-sm"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-xs font-medium text-zinc-400 mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full px-4 py-2.5 rounded-lg bg-black border-2 border-zinc-700 text-white focus:outline-none focus:border-zinc-400 text-sm"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-xs font-medium text-zinc-400 mb-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              className="w-full px-4 py-2.5 rounded-lg bg-black border-2 border-zinc-700 text-white focus:outline-none focus:border-zinc-400 text-sm"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 rounded-lg bg-white hover:bg-zinc-200 text-black font-semibold transition shadow-md"
+        {/* Large Contact Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a 
+            href="mailto:abhijithms7306@gmail.com" 
+            className="px-8 py-4 rounded-lg bg-zinc-100 hover:bg-white text-black font-semibold text-sm uppercase tracking-widest transition-colors shadow-md flex items-center justify-center gap-3"
           >
-            Send Message
-          </button>
-        </form>
+            Send an Email
+          </a>
+          
+          <a 
+            href="tel:+917306479177" 
+            className="px-8 py-4 rounded-lg bg-[#121214] border border-zinc-800 text-white font-semibold text-sm uppercase tracking-widest hover:border-zinc-500 transition-colors flex items-center justify-center gap-3"
+          >
+            +91 7306479177
+          </a>
+        </div>
+        
       </div>
     </section>
   );

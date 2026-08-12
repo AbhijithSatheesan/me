@@ -24,10 +24,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        {/* BRANDING: Updated to your name */}
         <Link to="/" className="text-xl font-bold tracking-tight text-white hover:text-zinc-300 transition">
-          Dev<span className="text-white">.</span>
+          Abhijith<span className="text-zinc-500">.</span>
         </Link>
 
         {/* Desktop Nav */}
