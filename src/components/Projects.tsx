@@ -16,9 +16,7 @@ const Projects: React.FC = () => {
 
       <article className="group flex flex-col w-full">
         
-        {/* --- MASSIVE WIDE IMAGE --- 
-            Using w-full and h-auto ensures 100% of the image is shown without any cropping on both desktop and mobile.
-        */}
+        {/* --- MASSIVE WIDE IMAGE --- */}
         <div className="w-full mb-10 md:mb-16 rounded-xl overflow-hidden bg-[#121214] border border-zinc-800 shadow-2xl relative">
            <img 
              src={respawnNationImg} 
@@ -61,15 +59,34 @@ const Projects: React.FC = () => {
       <div className="mt-32 pt-8 border-t border-zinc-900">
         <h4 className="text-xs font-medium uppercase tracking-widest text-zinc-500 mb-8">Other Explorations</h4>
         
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-6 border-b border-zinc-900/50 hover:border-zinc-700 transition-colors group/row cursor-pointer">
-          <div>
-             <h5 className="text-xl font-serif text-zinc-300 group-hover/row:text-zinc-100 transition-colors">Vehicle Valuation Engine</h5>
-             <span className="text-sm text-zinc-600 font-light mt-1 block">Python / Scikit-Learn</span>
+        {/* NLP Microservice Project */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-zinc-900/50 hover:border-zinc-700 transition-colors group/row cursor-pointer">
+          <div className="max-w-2xl">
+             <h5 className="text-xl font-serif text-zinc-300 group-hover/row:text-zinc-100 transition-colors">Chat Auto-Moderator (NLP)</h5>
+             <span className="text-sm text-zinc-600 font-light mt-1 mb-4 block">PyTorch / DistilBERT / Django / Podman</span>
+             <p className="text-zinc-400 text-sm leading-relaxed font-light">
+               A self-hosted AI microservice that intercepts WebSocket messages and evaluates them for toxicity in milliseconds. Deployed entirely on CPU memory to bypass expensive cloud vendor lock-in.
+             </p>
           </div>
-          <a href="#" className="mt-4 sm:mt-0 text-xs uppercase tracking-widest text-zinc-500 group-hover/row:text-zinc-300 transition-colors">
+          <a href="https://github.com/AbhijithSatheesan/chat-moderator" target="_blank" rel="noopener noreferrer" className="mt-6 md:mt-0 text-xs uppercase tracking-widest text-zinc-500 group-hover/row:text-zinc-300 transition-colors whitespace-nowrap">
              View Repository →
           </a>
         </div>
+
+        {/* Vehicle Valuation Project */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-zinc-900/50 hover:border-zinc-700 transition-colors group/row cursor-pointer">
+          <div className="max-w-2xl">
+             <h5 className="text-xl font-serif text-zinc-300 group-hover/row:text-zinc-100 transition-colors">Vehicle Valuation Engine</h5>
+             <span className="text-sm text-zinc-600 font-light mt-1 mb-4 block">Python / Scikit-Learn / Pandas</span>
+             <p className="text-zinc-400 text-sm leading-relaxed font-light">
+               A machine learning regression model built to predict used car prices based on historical market data, mileage, and vehicle specifications. 
+             </p>
+          </div>
+          <a href="https://github.com/AbhijithSatheesan/carprice" target="_blank" rel="noopener noreferrer" className="mt-6 md:mt-0 text-xs uppercase tracking-widest text-zinc-500 group-hover/row:text-zinc-300 transition-colors whitespace-nowrap">
+             View Repository →
+          </a>
+        </div>
+
       </div>
 
     </section>
